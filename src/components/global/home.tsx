@@ -21,7 +21,7 @@ export default function Home() {
     // Simulate loading time
     const timeout = setTimeout(() => {
       setIsLoading(false);
-    }, 6100);
+    }, 7000);
 
     return () => clearTimeout(timeout);
   }, []);
