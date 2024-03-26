@@ -3,12 +3,11 @@
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import React, { ReactNode } from "react";
-
 interface AuroraBackgroundProps extends React.HTMLProps<HTMLDivElement> {
   children: ReactNode;
   showRadialGradient?: boolean;
 }
-
+ 
 export const AuroraBackground = ({
   className,
   children,
@@ -19,7 +18,7 @@ export const AuroraBackground = ({
     <main>
       <div
         className={cn(
-          "relative flex flex-col  h-[100vh] items-center justify-center bg-zinc-50 dark:bg-zinc-900  text-slate-950 transition-bg",
+          "relative flex flex-col h-[98vh] w-screen items-center justify-center bg-zinc-50 dark:bg-zinc-900  text-slate-950 transition-bg",
           className
         )}
         {...props}
@@ -59,7 +58,7 @@ export const AuroraBackground = ({
 
 export function AuroraBackgroundDemo() {
   return (
-    <AuroraBackground>
+    <AuroraBackground  >
       <motion.div
         initial={{ opacity: 0.0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}

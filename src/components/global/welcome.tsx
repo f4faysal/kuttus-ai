@@ -1,6 +1,6 @@
-const MyComponent = () => {
+const Welcome = () => {
   return (
-    <div className="w-screen h-screen overflow-hidden bg-white text-center text-[100%] relative">
+    <div className="w-screen h-screen overflow-hidden bg-neutral-900 text-center text-[100%] relative">
       <div className="background background0"></div>
       <div className="background background1"></div>
       <div className="background background2"></div>
@@ -127,4 +127,4 @@ const MyComponent = () => {
   );
 };
 
-export default MyComponent;
+export default Welcome;
