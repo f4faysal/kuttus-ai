@@ -10,9 +10,9 @@ import { CheckIcon } from "lucide-react";
 
 export default function Home() {
   return (
-    <main className="flex items-center justify-center flex-col">
+    <main className="flex items-center justify-center flex-col ">
       <Navbar />
-      <section className="h-screen w-full  bg-neutral-950 rounded-md  !overflow-visible relative flex flex-col items-center  antialiased">
+      <section className="w-full bg-neutral-950 rounded-md  !overflow-visible relative flex flex-col items-center  antialiased">
         <div className="absolute inset-0  h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_35%,#223_100%)]"></div>
         <div className="flex flex-col mt-[-100px] md:mt-[-50px]">
           <ContainerScroll
@@ -34,16 +34,17 @@ export default function Home() {
           />
         </div>
       </section>
+
       <InfiniteMovingCards
-        className="md:mt-[18rem] mt-[-100px]"
+        className="[background:radial-gradient(125%_125%_at_50%_10%,#000_35%,#223_100%)] "
         items={clients}
         direction="right"
         speed="slow"
       />
-      <section>
+      <section className="">
         <HeroParallax products={products}></HeroParallax>
       </section>
-      <section className="mt-[-500px]">
+      <section className="mt-[-500px] md:mt-[-10px]">
         <LampComponent />
         <div className="flex flex-wrap items-center justify-center flex-col md:flex-row gap-8 -mt-72">
           <CardContainer className="inter-var ">
