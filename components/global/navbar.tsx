@@ -1,10 +1,14 @@
+"use client";
+
 import { MenuIcon } from "lucide-react";
 import Link from "next/link";
 // import { UserButton, currentUser } from '@clerk/nextjs'
+import { useAuth } from "@clerk/nextjs";
 
 type Props = {};
 
 const Navbar =  (props: Props) => {
+  const { isSignedIn } = useAuth();
   const user = null;
   return (
     <header className="fixed right-0 left-0 top-0 py-4 px-4 bg-black/40 backdrop-blur-lg z-[100] flex items-center border-b-[1px] border-neutral-900 justify-between">
@@ -42,8 +46,8 @@ const Navbar =  (props: Props) => {
         </ul>
       </nav>
       <aside className="flex items-center gap-4">
-        <Link
-          href="/dashboard"
+         
+         <Link href={isSignedIn ? "/dashboard" : "/sign-up"}
           className="relative inline-flex h-10 overflow-hidden rounded-full p-[2px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
         >
           <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
@@ -52,7 +56,7 @@ const Navbar =  (props: Props) => {
           </span>
         </Link>
         {/* {user ? <UserButton afterSignOutUrl="/" /> : null} */}
-        {user ? "UserButton" : null}
+      
 
         <MenuIcon className="md:hidden" />
       </aside>
