@@ -1,5 +1,5 @@
 import Navbar from "@/components/navbar";
-import MenuOptions, { Sidebar } from "@/components/sidebar";
+import { Sidebar } from "@/components/sidebar";
 
 import { getApiLimitCount } from "@/lib/api-limit";
 import { checkSubscription } from "@/lib/subscription";
@@ -15,7 +15,7 @@ const DashboardLayout = async ({ children }: { children: React.ReactNode }) => {
       <Sidebar isPro={isPro} apiLimitCount={apiLimitCount} />
       {/* <MenuOptions  /> */}
       {/* </div> */}
-      <MenuOptions />
+      {/* <MenuOptions /> */}
       {/* <main className="md:pl-72 pb-10 bg-gray-900 h-full"> */}
       <main className="w-full ">
         <Navbar />
