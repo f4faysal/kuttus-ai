@@ -4,8 +4,9 @@ import { ArrowRight } from "lucide-react";
 import { useRouter } from "next/navigation";
 
 import { Card } from "@/components/ui/card";
-import { tools } from "@/constants";
 import { cn } from "@/lib/utils";
+
+import { tools } from "@/constants";
 
 export default function HomePage() {
   const router = useRouter();
@@ -27,7 +28,7 @@ export default function HomePage() {
           <Card
             onClick={() => router.push(tool.href)}
             key={tool.href}
-            className="p-4 border-white/5 hover:border-[#C8C7FF] flex items-center justify-between hover:shadow-[#C8C7FF] transition cursor-pointer "
+            className="p-4 border-black/5 flex items-center justify-between hover:shadow-md transition cursor-pointer"
           >
             <div className="flex items-center gap-x-4">
               <div className={cn("p-2 w-fit rounded-md", tool.bgColor)}>
