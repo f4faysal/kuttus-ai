@@ -8,8 +8,8 @@ import { CrispProvider } from "@/components/crisp-provider";
 import { ModalProvider } from "@/components/modal-provider";
 import { ToasterProvider } from "@/components/toaster-provider";
 
-import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import "./globals.css";
  
 
 const font = Inter({ subsets: ["latin"] });
