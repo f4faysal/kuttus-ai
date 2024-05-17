@@ -31,22 +31,27 @@ const ConversationPage = () => {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      prompt: ""
-    }
+      prompt: "",
+    },
   });
 
   const isLoading = form.formState.isSubmitting;
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
-      const userMessage: ChatCompletionRequestMessage = { role: "user", content: values.prompt };
+      const userMessage: ChatCompletionRequestMessage = {
+        role: "user",
+        content: values.prompt,
+      };
       const newMessages = [...messages, userMessage];
 
-      console.log(newMessages)
+      console.log(newMessages);
 
-      const response = await axios.post('/api/conversation', { messages: newMessages });
+      const response = await axios.post("/api/conversation", {
+        messages: newMessages,
+      });
 
-      console.log(response)
+      console.log(response);
 
       setMessages((current) => [...current, userMessage, response.data]);
 
@@ -60,7 +65,7 @@ const ConversationPage = () => {
     } finally {
       router.refresh();
     }
-  }
+  };
 
   return (
     <div>
@@ -95,7 +100,7 @@ const ConversationPage = () => {
                   <FormItem className="col-span-12 lg:col-span-10">
                     <FormControl className="m-0 p-0">
                       <Input
-                        className="border-0 outline-none focus-visible:ring-0 focus-visible:ring-transparent bg-[#111827] p-1"
+                        className="border-0 outline-none focus-visible:ring-0 focus-visible:ring-transparent bg-[#111827] px-2"
                         disabled={isLoading}
                         placeholder="How do I calculate the radius of a circle?"
                         {...field}
@@ -104,7 +109,12 @@ const ConversationPage = () => {
                   </FormItem>
                 )}
               />
-              <Button className="col-span-12 lg:col-span-2 w-full" type="submit" disabled={isLoading} size="icon">
+              <Button
+                className="col-span-12 lg:col-span-2 w-full"
+                type="submit"
+                disabled={isLoading}
+                size="icon"
+              >
                 Generate
               </Button>
             </form>
@@ -124,14 +134,14 @@ const ConversationPage = () => {
               <div
                 key={message.content}
                 className={cn(
-                  "p-8 w-full flex items-start gap-x-8 rounded-lg",
-                  message.role === "user" ? "bg-white border border-black/10" : "bg-muted",
+                  "p-8 w-full flex items-start gap-x-8 rounded-lg ",
+                  message.role === "user"
+                    ? "bg-slate-800 border border-black/10"
+                    : "bg-slate-600"
                 )}
               >
                 {message.role === "user" ? <UserAvatar /> : <BotAvatar />}
-                <p className="text-sm">
-                  {message.content}
-                </p>
+                <p className="text-sm">{message.content}</p>
               </div>
             ))}
           </div>
@@ -139,7 +149,6 @@ const ConversationPage = () => {
       </div>
     </div>
   );
-}
+};
 
 export default ConversationPage;
-

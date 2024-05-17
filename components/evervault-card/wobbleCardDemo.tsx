@@ -40,11 +40,11 @@ export function WobbleCardDemo() {
             The Ultimate Homework Companion
           </h2>
           <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200">
-            Say hello to stress-free homework sessions with PopAi! it's your
-            personalized academic ally. Imagine uploading a PDF, and DaffThink
-            instantly helps answer any questions about its content. You can also
-            upload a learning document, DaffThink will assist in crafting
-            well-informed, articulate articles based on that material.
+            Say hello to stress-free homework sessions with PopAi! it&aposs
+            your personalized academic ally. Imagine uploading a PDF, and
+            DaffThink instantly helps answer any questions about its content.
+            You can also upload a learning document, DaffThink will assist in
+            crafting well-informed, articulate articles based on that material.
           </p>
         </div>
         <Image
@@ -54,7 +54,6 @@ export function WobbleCardDemo() {
           alt="linear demo image"
           className="absolute -right-2 md:-right-[40%] lg:-right-[20%] -bottom-10 object-contain rounded-2xl"
         />
-      
       </WobbleCard>
     </div>
   );

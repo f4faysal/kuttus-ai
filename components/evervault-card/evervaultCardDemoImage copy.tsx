@@ -45,14 +45,14 @@ export function EvervaultCardDemoImageChat() {
           Where Your Imagination Meets Efficiency
         </h1>
         <p className="pb-5 text-muted-foreground leading-loose">
-          This isn't just a tool; it's your creative partner. With an intuitive
-          array of templates, DaffThink turns complex tasks into simple, elegant
-          processes. Whether you're drafting a paper, designing a presentation,
-          or optimizing your resume, DaffThink transforms these tasks into
-          seamless experiences. It's not about the templates; it's about you.
-          Your unique ideas, powered by DaffThink, create something
-          extraordinary. Embrace the future of creativity – simple, powerful,
-          uniquely yours.
+          This isn&apost just a tool; it&aposs your creative partner. With an
+          intuitive array of templates, DaffThink turns complex tasks into
+          simple, elegant processes. Whether you&aposre drafting a paper,
+          designing a presentation, or optimizing your resume, DaffThink
+          transforms these tasks into seamless experiences. It&aposs not about
+          the templates; it&aposs about you. Your unique ideas, powered by
+          DaffThink, create something extraordinary. Embrace the future of
+          creativity – simple, powerful, uniquely yours.
         </p>
 
         <button className="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
