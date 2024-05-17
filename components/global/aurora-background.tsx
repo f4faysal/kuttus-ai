@@ -1,13 +1,17 @@
 "use client";
- 
+
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import React, { ReactNode } from "react";
+import { Button } from "../ui/button";
+
+import { useAuth } from "@clerk/nextjs";
+import Link from "next/link";
 interface AuroraBackgroundProps extends React.HTMLProps<HTMLDivElement> {
   children: ReactNode;
   showRadialGradient?: boolean;
 }
- 
+
 export const AuroraBackground = ({
   className,
   children,
@@ -57,8 +61,9 @@ export const AuroraBackground = ({
 // import { AuroraBackground } from "../ui/aurora-background";
 
 export function AuroraBackgroundDemo() {
+  const { isSignedIn } = useAuth();
   return (
-    <AuroraBackground  >
+    <AuroraBackground>
       <motion.div
         initial={{ opacity: 0.0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -71,15 +76,22 @@ export function AuroraBackgroundDemo() {
       >
         <div className="text-3xl md:text-7xl font-bold dark:text-white text-center flex">
           Welcome to &nbsp;
-          <span className="">Kuttus AI</span>
+          <span className=" font-bold">Daff</span>
+          <span className=" font-medium">Think</span>
         </div>
         <div className="font-extralight text-base md:text-4xl dark:text-neutral-200 py-4">
-          Where the enchanting world of Daffodils meets cutting-edge technology
+          Your One-Stop AI Solution for Content Creation and Analysis
         </div>
-
-        <button className="bg-black dark:bg-white rounded-full w-fit text-white dark:text-black px-4 py-2">
-          Explore Now
-        </button>
+        <Link href={isSignedIn ? "/dashboard" : "/sign-up"}>
+          <Button
+            size={"lg"}
+            className="p-8 mb-8 md:mb-0 text-2xl w-full sm:w-fit border-t-2 rounded-full border-[#4D4D4D] bg-[#1F1F1F] hover:bg-white group transition-all flex items-center justify-center gap-4 hover:shadow-xl hover:shadow-neutral-500 duration-500"
+          >
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-neutral-500 to-neutral-600  md:text-center font-sans group-hover:bg-gradient-to-r group-hover:from-black goup-hover:to-black">
+              Get Started for Daffodil Students
+            </span>
+          </Button>
+        </Link>
       </motion.div>
     </AuroraBackground>
   );

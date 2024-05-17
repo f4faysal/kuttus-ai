@@ -1,4 +1,4 @@
-import Image from "next/image"
+import Image from "next/image";
 
 export const Loader = () => {
   return (
@@ -11,7 +11,7 @@ export const Loader = () => {
         />
       </div>
       <p className="text-sm text-muted-foreground">
-        Genius is thinking...
+        KuttusAI is thinking...
       </p>
     </div>
   );

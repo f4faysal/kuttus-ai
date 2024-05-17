@@ -22,11 +22,11 @@ export const GoogleGeminiEffect = ({
   return (
     <div className={cn("sticky top-60", className)}>
       <p className="text-lg md:text-7xl font-normal pb-4 text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-100 to-neutral-300">
-        {title || `Exploring Innovation with Kuttus`}
+        {title || `Exploring Innovation with DaffThink AI`}
       </p>
       <p className="text-xs md:text-xl font-normal text-center text-neutral-400 mt-4 max-w-lg mx-auto">
         {description ||
-          `Kuttus AI interface blends Conversation, Code Generation, Music, Video Creation, and Image Generation, highlighting adaptability.`}
+          `DaffThink: Conversations, Code, Music, Video, Image—Versatility Defined`}
       </p>
 
       <div className="w-full h-[800px] -top-60 md:-top-40  flex items-center justify-center bg-red-transparent absolute ">
@@ -159,14 +159,15 @@ export const GoogleGeminiEffect = ({
           <motion.text
             stroke="#fff"
             fill="none"
-            x="630"
+            x="500"
             y="590"
             style={{
               fontSize: "3rem",
             }}
           >
-            Kuttus AI
+            powered by KuttusAi
           </motion.text>
+
           {/* Image Generating AI */}
           <motion.text
             stroke="#FFB7C5"
@@ -380,6 +381,7 @@ export function GoogleGeminiEffectDemo() {
 
   return (
     <div
+      id="products"
       className="h-[160rem] bg-black w-full dark:border dark:border-white/[0.1] rounded-md relative pt-40 overflow-clip"
       ref={ref}
     >
