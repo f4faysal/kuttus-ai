@@ -2,19 +2,12 @@ import Home from "@/components/global/home";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Home | kuttusAi",
-  description: "kuttus Ai is a web app that allows you to shorten URLs.",
+  title: "Daff Think - Home",
+  description: "Daff Think - Home Page",
 };
 
 const LandingPage = () => {
-  return (
-    // <div className="h-full ">
-    //   {/* <LandingHero /> */}
-    //   {/* <LandingContent /> */}
-    // </div>
-      // {/* <LandingNavbar /> */}
-    <Home />
-  );
+  return <Home />;
 };
 
 export default LandingPage;

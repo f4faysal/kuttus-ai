@@ -1,17 +1,21 @@
 "use client";
 import { CardBody, CardContainer, CardItem } from "@/components/global/3d-card";
-import { HeroParallax } from "@/components/global/connect-parallax";
 import { ContainerScroll } from "@/components/global/container-scroll-animation";
-import { InfiniteMovingCards } from "@/components/global/infinite-moving-cards";
 import { LampComponent } from "@/components/global/lamp";
 import Navbar from "@/components/global/navbar";
 import { Button } from "@/components/ui/button";
-import { clients, products } from "@/lib/constant";
 import { useAuth } from "@clerk/nextjs";
 import { motion } from "framer-motion";
 import { CheckIcon } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { BackgroundGradientAnimationDemo } from "../evervault-card/backgroundGradientAnimationDemo";
+import { CanvasRevealEffectDemo } from "../evervault-card/canvasRevealEffectDemo";
+import { EvervaultCardDemo } from "../evervault-card/evervaultCardDemo";
+import { EvervaultCardDemoImage } from "../evervault-card/evervaultCardDemoImage";
+import { EvervaultCardDemoImageChat } from "../evervault-card/evervaultCardDemoImage copy";
+import { WobbleCardDemo } from "../evervault-card/wobbleCardDemo";
+import { VortexDemo } from "../footer";
 import { AuroraBackgroundDemo } from "./aurora-background";
 import { GoogleGeminiEffectDemo } from "./google-gemini-effect";
 import Welcome from "./welcome";
@@ -70,16 +74,22 @@ export default function Home() {
 
           <GoogleGeminiEffectDemo />
 
-          <InfiniteMovingCards
+          <EvervaultCardDemoImageChat />
+          <EvervaultCardDemoImage />
+          <EvervaultCardDemo />
+          <div>
+            <BackgroundGradientAnimationDemo />
+          </div>
+          <CanvasRevealEffectDemo />
+          {/*  */}
+          <WobbleCardDemo />
+          {/* <InfiniteMovingCards
             className="[background:radial-gradient(125%_125%_at_50%_10%,#000_35%,#223_100%)] "
             items={clients}
             direction="right"
             speed="slow"
-          />
-          <section  className=" ">
-            <HeroParallax products={products}></HeroParallax>
-          </section>
-          <section className="mt-[0px] md:mt-[0px] p-20">
+          /> */}
+          <section id="pricing" className="mt-[0px] md:mt-[0px] p-20">
             <LampComponent />
             <div className="flex flex-wrap items-center justify-center flex-col md:flex-row gap-8 -mt-72">
               <CardContainer className="inter-var ">
@@ -225,6 +235,10 @@ export default function Home() {
               </CardContainer>
             </div>
           </section>
+
+          <div className="h-[50vh]">
+            <VortexDemo />
+          </div>
         </motion.main>
       )}
     </>

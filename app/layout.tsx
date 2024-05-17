@@ -15,7 +15,7 @@ import "./globals.css";
 const font = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "KuttusAI",
+  title: "DaffThink",
   description: "AI Platform",
 };
 

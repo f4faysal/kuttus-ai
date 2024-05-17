@@ -15,10 +15,10 @@ export default function HomePage() {
     <div>
       <div className="mb-8 space-y-4">
         <h2 className="text-2xl md:text-4xl font-bold text-center">
-          Explore the power of Kuttus AI
+          Explore the power of DaffThink
         </h2>
         <p className="text-muted-foreground font-light text-sm md:text-lg text-center">
-          Choose from a variety of tools to help you get started with Kuttus AI.{" "}
+          Choose from a variety of tools to help you get started with Kuttus AI.
           <br /> We have tools for every use case, from image processing to
           natural language processing. Explore the tools below to get started.
         </p>

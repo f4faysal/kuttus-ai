@@ -1,20 +1,20 @@
 "use client";
 
-import * as z from "zod";
-import axios from "axios";
-import { useState } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import { toast } from "react-hot-toast";
+import axios from "axios";
 import { FileAudio } from "lucide-react";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { toast } from "react-hot-toast";
+import * as z from "zod";
 
 import { Heading } from "@/components/heading";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
 import { Loader } from "@/components/loader";
+import { Button } from "@/components/ui/button";
 import { Empty } from "@/components/ui/empty";
+import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
 import { useProModal } from "@/hooks/use-pro-modal";
 
 import { formSchema } from "./constants";
@@ -84,7 +84,7 @@ const VideoPage = () => {
                 <FormItem className="col-span-12 lg:col-span-10">
                   <FormControl className="m-0 p-0">
                     <Input
-                      className="border-0 outline-none focus-visible:ring-0 focus-visible:ring-transparent"
+                      className="border-0 outline-none focus-visible:ring-0 focus-visible:ring-transparent bg-[#111827] px-2"
                       disabled={isLoading} 
                       placeholder="Clown fish swimming in a coral reef" 
                       {...field}

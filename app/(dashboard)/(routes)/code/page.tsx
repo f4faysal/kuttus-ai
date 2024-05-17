@@ -1,26 +1,26 @@
 "use client";
 
-import * as z from "zod";
 import axios from "axios";
 import { Code } from "lucide-react";
-import { useForm } from "react-hook-form";
-import { useState } from "react";
-import { toast } from "react-hot-toast";
-import ReactMarkdown from "react-markdown";
 import { useRouter } from "next/navigation";
 import { ChatCompletionRequestMessage } from "openai";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { toast } from "react-hot-toast";
+import ReactMarkdown from "react-markdown";
+import * as z from "zod";
 
 import { BotAvatar } from "@/components/bot-avatar";
 import { Heading } from "@/components/heading";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
-import { cn } from "@/lib/utils";
 import { Loader } from "@/components/loader";
-import { UserAvatar } from "@/components/user-avatar";
+import { Button } from "@/components/ui/button";
 import { Empty } from "@/components/ui/empty";
+import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { UserAvatar } from "@/components/user-avatar";
 import { useProModal } from "@/hooks/use-pro-modal";
+import { cn } from "@/lib/utils";
+import { zodResolver } from "@hookform/resolvers/zod";
 
 import { formSchema } from "./constants";
 
@@ -91,7 +91,7 @@ const CodePage = () => {
                   <FormItem className="col-span-12 lg:col-span-10">
                     <FormControl className="m-0 p-0">
                       <Input
-                        className="border-0 outline-none focus-visible:ring-0 focus-visible:ring-transparent"
+                        className="border-0 outline-none focus-visible:ring-0 focus-visible:ring-transparent bg-[#111827] px-2"
                         disabled={isLoading} 
                         placeholder="Simple toggle button using react hooks." 
                         {...field}

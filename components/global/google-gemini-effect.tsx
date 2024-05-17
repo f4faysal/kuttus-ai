@@ -31,7 +31,7 @@ export const GoogleGeminiEffect = ({
 
       <div className="w-full h-[800px] -top-60 md:-top-40  flex items-center justify-center bg-red-transparent absolute ">
         <button className="font-bold bg-white rounded-full md:px-4 md:py-2 px-2 py-1 md:mt-24 mt-8 z-30 md:text-base text-black text-xs  w-fit mx-auto ">
-          V0.1 <span className="text-xs">Bata</span>
+          V1.0 <span className="text-xs">Bata</span>
         </button>
       </div>
       <div className="h-[500px]">
