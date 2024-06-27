@@ -9,7 +9,7 @@ import { AnimatePresence, motion } from "framer-motion";
 export function CanvasRevealEffectDemo() {
   return (
     <>
-      <div className="py-24 flex flex-col lg:flex-row items-center justify-center bg-white dark:bg-black w-full gap-4 mx-auto px-8">
+      <div className="py-24 flex flex-col lg:flex-row items-center justify-center bg-white dark:bg-black w-full gap-4 mx-auto px-8" id="resources">
         <Card title="Image Generation" icon={<FaImage size={"70"} />}>
           <CanvasRevealEffect
             animationSpeed={5.1}

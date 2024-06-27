@@ -15,7 +15,6 @@ import { EvervaultCardDemo } from "../evervault-card/evervaultCardDemo";
 import { EvervaultCardDemoImage } from "../evervault-card/evervaultCardDemoImage";
 import { EvervaultCardDemoImageChat } from "../evervault-card/evervaultCardDemoImage copy";
 import { WobbleCardDemo } from "../evervault-card/wobbleCardDemo";
-import { VortexDemo } from "../footer";
 import { AuroraBackgroundDemo } from "./aurora-background";
 import { GoogleGeminiEffectDemo } from "./google-gemini-effect";
 import Welcome from "./welcome";
@@ -81,43 +80,46 @@ export default function Home() {
             <BackgroundGradientAnimationDemo />
           </div>
           <CanvasRevealEffectDemo />
-          {/*  */}
+
           <WobbleCardDemo />
-          {/* <InfiniteMovingCards
-            className="[background:radial-gradient(125%_125%_at_50%_10%,#000_35%,#223_100%)] "
-            items={clients}
-            direction="right"
-            speed="slow"
-          /> */}
+
           <section id="pricing" className="mt-[0px] md:mt-[0px] p-20">
             <LampComponent />
             <div className="flex flex-wrap items-center justify-center flex-col md:flex-row gap-8 -mt-72">
+              {/* Free Plan */}
               <CardContainer className="inter-var ">
-                <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-neutral-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full md:!w-[350px] h-auto rounded-xl p-6 border">
+                <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-neutral-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full md:!w-[350px] h-auto rounded-xl p-6 border">
                   <CardItem
                     translateZ="50"
-                    className="text-xl font-bold text-neutral-600 dark:text-white "
+                    className="text-xl font-bold text-neutral-600 dark:text-white"
                   >
-                    Hobby
-                    <h2 className="text-6xl ">$0</h2>
+                    Free Plan
+                    <h2 className="text-6xl">$0</h2>
                   </CardItem>
                   <CardItem
                     translateZ="60"
                     className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
                   >
-                    Get a glimpse of what our software is capable of. Just a
-                    heads up {"you'll"} never leave us after this!
+                    A great start for exploring our platform with essential
+                    features.
                     <ul className="my-4 flex flex-col gap-2">
                       <li className="flex items-center gap-2">
-                        <CheckIcon />3 Free automations
+                        <CheckIcon /> Access to Conversation tool
                       </li>
                       <li className="flex items-center gap-2">
-                        <CheckIcon />
-                        100 tasks per month
+                        <CheckIcon /> 50 generations per month
                       </li>
                       <li className="flex items-center gap-2">
-                        <CheckIcon />
-                        Two-step Actions
+                        <CheckIcon /> Basic Image Generation
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <CheckIcon /> Community support
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <CheckIcon /> Basic analytics and insights
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <CheckIcon /> 2 active projects
                       </li>
                     </ul>
                   </CardItem>
@@ -139,32 +141,40 @@ export default function Home() {
                   </div>
                 </CardBody>
               </CardContainer>
+
+              {/* Standard Plan */}
               <CardContainer className="inter-var ">
-                <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-neutral-500/[0.1] dark:bg-black dark:border-[#E2CBFF] border-black/[0.1] w-full md:!w-[350px] h-auto rounded-xl p-6 border">
+                <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-neutral-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full md:!w-[350px] h-auto rounded-xl p-6 border">
                   <CardItem
                     translateZ="50"
-                    className="text-xl font-bold text-neutral-600 dark:text-white "
+                    className="text-xl font-bold text-neutral-600 dark:text-white"
                   >
-                    Pro Plan
-                    <h2 className="text-6xl ">$29</h2>
+                    Standard Plan
+                    <h2 className="text-6xl">$18</h2>
                   </CardItem>
                   <CardItem
                     translateZ="60"
                     className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
                   >
-                    Get a glimpse of what our software is capable of. Just a
-                    heads up {"you'll"} never leave us after this!
+                    Ideal for growing your projects with more features.
                     <ul className="my-4 flex flex-col gap-2">
                       <li className="flex items-center gap-2">
-                        <CheckIcon />3 Free automations
+                        <CheckIcon /> Access to Conversation tool
                       </li>
                       <li className="flex items-center gap-2">
-                        <CheckIcon />
-                        100 tasks per month
+                        <CheckIcon /> 200 generations per month
                       </li>
                       <li className="flex items-center gap-2">
-                        <CheckIcon />
-                        Two-step Actions
+                        <CheckIcon /> Advanced Image Generation
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <CheckIcon /> Priority support
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <CheckIcon /> Enhanced analytics and insights
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <CheckIcon /> 5 active projects
                       </li>
                     </ul>
                   </CardItem>
@@ -186,32 +196,40 @@ export default function Home() {
                   </div>
                 </CardBody>
               </CardContainer>
+
+              {/* Premium Plan */}
               <CardContainer className="inter-var ">
-                <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-neutral-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full md:!w-[350px] h-auto rounded-xl p-6 border">
+                <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-neutral-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full md:!w-[350px] h-auto rounded-xl p-6 border">
                   <CardItem
                     translateZ="50"
-                    className="text-xl font-bold text-neutral-600 dark:text-white "
+                    className="text-xl font-bold text-neutral-600 dark:text-white"
                   >
-                    Unlimited
-                    <h2 className="text-6xl ">$99</h2>
+                    Premium Plan
+                    <h2 className="text-6xl">$27</h2>
                   </CardItem>
                   <CardItem
                     translateZ="60"
                     className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
                   >
-                    Get a glimpse of what our software is capable of. Just a
-                    heads up {"you'll"} never leave us after this!
+                    Best for maximizing your productivity with all features.
                     <ul className="my-4 flex flex-col gap-2">
                       <li className="flex items-center gap-2">
-                        <CheckIcon />3 Free automations
+                        <CheckIcon /> Access to Conversation tool
                       </li>
                       <li className="flex items-center gap-2">
-                        <CheckIcon />
-                        100 tasks per month
+                        <CheckIcon /> Unlimited generations
                       </li>
                       <li className="flex items-center gap-2">
-                        <CheckIcon />
-                        Two-step Actions
+                        <CheckIcon /> Premium Image Generation
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <CheckIcon /> Dedicated support
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <CheckIcon /> Comprehensive analytics and insights
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <CheckIcon /> Unlimited active projects
                       </li>
                     </ul>
                   </CardItem>
@@ -236,9 +254,14 @@ export default function Home() {
             </div>
           </section>
 
-          <div className="h-[50vh]">
-            <VortexDemo />
-          </div>
+          <footer className="h-[150px] w-full">
+            <div className="flex items-center justify-center h-full w-full bg-neutral-950">
+              {/* All rights reserved. */}
+              <p className="text-neutral-500 dark:text-neutral-300">
+                © 2021 DaffThink. All rights reserved| Made with ❤️ by DaffThink
+              </p>
+            </div>
+          </footer>
         </motion.main>
       )}
     </>

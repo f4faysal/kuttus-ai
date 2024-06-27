@@ -34,17 +34,18 @@ const Navbar = (props: Props) => {
           <li>
             <Link href="#pricing">Pricing</Link>
           </li>
+
           <li>
-            <Link href="#">Clients</Link>
-          </li>
-          <li>
-            <Link href="#">Resources</Link>
+            <Link href="#resources">Resources</Link>
           </li>
           <li>
             <Link href="#documentation">Documentation</Link>
           </li>
           <li>
-            <Link href="#">Enterprise</Link>
+            {/* Contact github link  */}
+            <Link href="https://f4faysal.vercel.app/" passHref>
+              Contact
+            </Link>
           </li>
         </ul>
       </nav>
